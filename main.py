@@ -21,7 +21,7 @@ if not os.path.exists(path_csv):
 
 df = pd.read_csv(path_csv)
 
-# Filtrar outliers extremos de precio (por encima del percentil 99)
+# Filtrar outliers 
 p99 = df["price"].quantile(0.99)
 df = df[df["price"] <= p99].reset_index(drop=True)
 
@@ -74,6 +74,21 @@ print(
 print(
     f"{'Linear Regression':<20} {lr_results['mae']:>12,.0f} {lr_results['rmse']:>12,.0f}")
 print("=" * 48)
+
+# ─────────────────────────────────────────────────────────────
+# CURVA DE PÉRDIDA
+# ─────────────────────────────────────────────────────────────
+
+plt.figure(figsize=(8, 5))
+plt.plot(history["train"], label="Train Loss (MSE)", linewidth=2)
+plt.xlabel("Epoch")
+plt.ylabel("MSE Loss")
+plt.title("Curva de Pérdida — Neural Net")
+plt.legend()
+plt.grid(True, alpha=0.3)
+plt.savefig("loss_curve.png", dpi=150)
+plt.show()
+print("\nCurva de pérdida guardada en loss_curve.png")
 
 # ─────────────────────────────────────────────────────────────
 # GRÁFICO
