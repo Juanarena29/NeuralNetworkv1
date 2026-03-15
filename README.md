@@ -239,6 +239,8 @@ Lo más relevante es que la curva de validación **sigue de cerca a la de entren
 | **Neural Net (NumPy — desde cero)** | **9,022** | **11,097** |
 | Linear Regression (sklearn) | 8,963 | 10,889 |
 
+El dataset utilizado es un conjunto básico de house pricing con tres features: superficie (m²), número de habitaciones y número de pisos. La simplicidad del dataset es intencional — con una relación esencialmente lineal entre features y target, la regresión lineal representa un baseline difícil de superar, lo que hace la comparación más exigente para la red neuronal.
+
 La diferencia es de **~$59 en MAE** y **~$208 en RMSE**. Prácticamente cero.
 
 Esto significa que una red neuronal implementada a mano, en NumPy puro, sin ningún framework de deep learning, **iguala en precisión a la implementación optimizada de scikit-learn**. La red derivada a mano produce el mismo resultado que décadas de ingeniería de software aplicada a regresión lineal.
