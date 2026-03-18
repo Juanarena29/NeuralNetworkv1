@@ -49,8 +49,8 @@ y_train_norm = (y_train - y_mean) / y_std
 
 np.random.seed(42)
 net = NeuralNet([3, 16, 8, 1], lr=0.01)
-net.train(X_train_prep, y_train_norm, epochs=1000,
-          log_every=200, y_std=y_std, y_mean=y_mean)
+history = net.train(X_train_prep, y_train_norm, epochs=800,
+                    log_every=200, y_std=y_std, y_mean=y_mean)
 
 lr_model = LinearRegressionModel()
 lr_model.train(X_train, y_train)

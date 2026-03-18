@@ -4,12 +4,32 @@ A fully-connected neural network implemented in **pure NumPy**: forward pass, ba
 
 ---
 
+## Interactive Demo
+
+The project includes a **Streamlit demo** that lets you tweak hyperparameters in real time and visualize the results:
+
+- Number of hidden layers (1–10)
+- Neurons per individual layer (1–36)
+- Learning rate and number of epochs
+- Automatic comparison against Linear Regression
+- Loss curve and predicted vs. actual scatter plots
+
+```bash
+streamlit run app.py
+```
+
+> **[Open Demo on Streamlit Cloud](https://tu-app.streamlit.app)** ← replace with your deploy URL
+
+---
+
 ## Project Structure
 
 ```
 ├── net.py                          # Neural network implemented from scratch
 ├── linear_regression_baseline.py   # Baseline using sklearn
 ├── main.py                         # Main script: data, training, evaluation
+├── app.py                          # Interactive Streamlit demo
+├── housing.csv                     # Dataset
 ├── loss_curve.png                  # Train vs. validation loss curve
 └── comparacion.png                 # Predicted vs. actual scatter plots (NN vs. LR)
 ```
@@ -24,10 +44,13 @@ git clone https://github.com/Juanarena29/NeuralNetworkv1
 cd NeuralNetworkv1
 
 # Install dependencies
-pip install numpy pandas scikit-learn matplotlib
+pip install numpy pandas scikit-learn matplotlib streamlit
 
 # Run
 python main.py
+
+# Run interactive demo
+streamlit run app.py
 ```
 
 The script trains both the neural network and the linear regression model, prints metrics to the console, and saves `loss_curve.png` and `comparacion.png` to the current directory.
