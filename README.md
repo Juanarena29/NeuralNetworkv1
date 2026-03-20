@@ -18,7 +18,7 @@ The project includes a **Streamlit demo** that lets you tweak hyperparameters in
 streamlit run app.py
 ```
 
-> **[Open Demo on Streamlit Cloud](https://tu-app.streamlit.app)** ← replace with your deploy URL
+> **neuralnetworkv1.streamlit.app**
 
 ---
 
