@@ -18,7 +18,7 @@ The project includes a **Streamlit demo** that lets you tweak hyperparameters in
 streamlit run app.py
 ```
 
-> **neuralnetworkv1.streamlit.app**
+> **[DEMO](https://neuralnetworkv1.streamlit.app/)**
 
 ---
 
